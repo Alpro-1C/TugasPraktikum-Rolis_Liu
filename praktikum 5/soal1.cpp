@@ -2,10 +2,28 @@
 using namespace std;
 
     void loop() {
-        for (int i = 1; i < 100; i++){
+        for (int i = 1; i < 100; i++){ //function garis
             cout << "-";
         }
     }
+
+    void pesan(string bil, int result, int batas) { //function pesan jumlah
+        cout << "Jumlah seluruh bilangan " << bil << " antara 1 dan " << batas << " : " << result << endl;
+    }
+
+    void enter() { //function enter
+        cout << "\n";
+    }
+    
+    void pesanFaktor(string bil) { //function pesan faktor
+        cout << "\nFaktor-faktor dari jumlah " << bil << " tersebut adalah : ";
+    }
+
+    void pesan2(string bil, int batas) {
+        cout << "\nBilangan " << bil << " antara 1 dan " << batas << " : ";
+    }
+
+
 
 int main () {
     //Menentukan variabel
@@ -19,7 +37,7 @@ int main () {
     cin >> batas;
 
     //bilangan ganjil
-    cout << "Bilangan ganjil antara 1 dan " << batas << " : ";
+    pesan2("ganjil", batas);
     
     ganjil = 0;
     for (int i = 1; i <= batas; i++) {
@@ -30,7 +48,7 @@ int main () {
      }
 
     //bilangan genap
-    cout << "\nBilangan genap antara 1 dan " << batas << " : ";
+    pesan2("genap", batas);
     
     genap = 0;
     for (int i = 2; i <= batas; i += 2)
@@ -40,7 +58,7 @@ int main () {
     }
 
     //bilangan prima
-    cout << "\nBilangan prima antara 1 dan " << batas << " : ";
+    pesan2("prima", batas);
     
     prima = 0;
     for (int i = 1; i <= batas; i++) {
@@ -56,14 +74,15 @@ int main () {
         prima += i;
     }
     }
-
+    enter();
     //menghitung jumlahnya
-    cout << "\nJumlah seluruh bilangan ganjil antara 1 dan " << batas << " : " << ganjil << endl;
-    cout << "Jumlah seluruh bilangan genap antara 1 dan " << batas << " : " << genap << endl;
-    cout << "Jumlah seluruh bilangan prima antara 1 dan " << batas << " : " << prima << endl;
+    enter();
+    pesan("ganjil", ganjil, batas);
+    pesan("genap", genap, batas);
+    pesan("prima", prima, batas);
 
     //pemfaktoran bil ganjil
-    cout << "Faktor-faktor dari jumlah ganjil tersebut adalah : ";
+    pesanFaktor("ganjil");
     for (int i = 1; i <= ganjil; i++) {
         if (ganjil % i == 0) {
             cout << i << " ";
@@ -71,7 +90,7 @@ int main () {
     }
 
     //pemfaktoran bil genap
-    cout << "\nFaktor-faktor dari jumlah genap tersebut adalah : ";
+    pesanFaktor("genap");
     for (int i = 1; i <= genap; i++) {
         if (genap % i == 0) {
             cout << i << " ";
@@ -79,7 +98,7 @@ int main () {
     }
 
     //pemfaktoran bil prima
-    cout << "\nFaktor-faktor dari jumlah prima tersebut adalah : ";
+    pesanFaktor("prima");
     for (int i = 1; i <= prima; i++) {
         if (prima % i == 0) {
             cout << i << " ";
