@@ -56,7 +56,6 @@ int main () {
         prima += i;
     }
     }
-
     //menghitung jumlahnya
     cout << "\nJumlah seluruh bilangan ganjil antara 1 dan " << batas << " : " << ganjil << endl;
     cout << "Jumlah seluruh bilangan genap antara 1 dan " << batas << " : " << genap << endl;

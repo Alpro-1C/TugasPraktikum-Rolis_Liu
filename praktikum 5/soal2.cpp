@@ -22,7 +22,6 @@ void segitigaBintang() {
 int main() {
     
     segitigaBintang();
-
     
     return 0;
 }
